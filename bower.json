@@ -1,0 +1,24 @@
+{
+  "name": "practicaPHPUnit",
+  "version": "0.0.0",
+  "homepage": "https://github.com/slayerfat/practicaPHPUnit",
+  "authors": [
+    "slayerfat <slayerfat@gmail.com>"
+  ],
+  "description": "practicas de unit test",
+  "main": "index.php",
+  "keywords": [
+    "php",
+    "unit",
+    "test"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
