@@ -6,6 +6,6 @@
 class Home extends Controlador{
   
   public function index(){
-    echo "home/index";
+    echo "clase: Home: home/index";
   }
 }
