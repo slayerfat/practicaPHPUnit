@@ -13,4 +13,10 @@ class Controlador{
 
     return new $modelo;
   }
+
+  protected function vista($vista, $datos = []){
+
+    require_once '../php/vistas/'. $vista .'.php';
+
+  }
 }

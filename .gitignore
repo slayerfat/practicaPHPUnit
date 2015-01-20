@@ -2,3 +2,5 @@
 .pruebas/*
 node_modules/*
 bower_components/*
+
+/vendor/

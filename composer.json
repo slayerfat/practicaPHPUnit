@@ -1,0 +1,12 @@
+{
+    "name": "slayerfat/practica-php-unit",
+    "description": "pruebas de unit test y MVC",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "slayerfat",
+            "email": "slayerfat@gmail.com"
+        }
+    ],
+    "require": {}
+}
