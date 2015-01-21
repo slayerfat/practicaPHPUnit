@@ -1,5 +1,5 @@
 <?php 
-
+namespace app\php\core;
 /**
 * 
 */
@@ -19,10 +19,11 @@ class App{
       unset($url[0]);
     endif;
 
-    require_once '../php/controladores/'. $this->controlador .'.php';
+    // require_once '../php/controladores/'. $this->controlador .'.php';
 
     // se instancia al controlador como un nuevo objeto
-    $this->controlador = new $this->controlador;
+    $clase = 'practica\\controladores\\'.'Home';
+    $this->controlador = new $clase;
 
     // se chequea si existe el metodo solicitado
     if ( isset($url[1]) ):

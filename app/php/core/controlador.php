@@ -1,8 +1,8 @@
 <?php 
-
+namespace app\php\core;
 class Controlador{
 
-  protected $modelo = 'Usuario';
+  protected $modelo = 'Calculadora';
   
   protected function modelo($modelo){
 

@@ -8,8 +8,7 @@
  * tener en cuenta Options Indexes FollowSymLinks ExecCGI Includes MultiViews
  * y por ultimo AllowOverride All
  */
+require_once '../../vendor/autoload.php';
 
-require_once '../php/init.php';
 
-
-$app = new App();
+$app = new app\php\core\App();
