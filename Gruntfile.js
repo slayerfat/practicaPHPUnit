@@ -5,21 +5,22 @@ module.exports = function(grunt) {
 
     phplint:{
       app: ['app/**/*.php'],
-      tests: ['tests/php**/*.php']
+      tests: ['tests/php/**/*.php']
     },
 
     watch: {
+      grunt: { files: ['Gruntfile.js'] },
       options: {
         livereload: true,
         spawn: false,
       },
       phpApp: {
-        files: ['app/**/*.php'],
+        files: ['app/php/**/*.php'],
         tasks: ['phplint:app'],
       },
       phpTests: {
-        files: ['tests/php**/*.php'],
-        tasks: ['phplint:tests'],
+        files: ['tests/php/**/*.php'],
+        tasks: ['phplint:tests', 'phpunit'],
       },
     },
 
@@ -29,8 +30,9 @@ module.exports = function(grunt) {
       },
       options: {
         bin: 'vendor/bin/phpunit',
-        bootstrap: 'tests/php/phpunit.php',
-        colors: true
+        bootstrap: false,
+        colors: true,
+        configuration: 'phpunit.xml'
       }
     }
   });
