@@ -1,16 +1,17 @@
 <?php 
 namespace App\php\core;
 use App\php\modelos\Calculadora;
+
 class Controlador{
 
   protected $modelo = 'Calculadora';
   
   protected function modelo($modelo){
 
-    if (file_exists('../php/modelos/' . $modelo . '.php')):
+    if (file_exists('../php/modelos/' .strtolower($modelo) . '.php')):
       $this->modelo = $modelo;
     endif;
-    $clase = 'App\\php\\modelos\\'.'Usuario';
+    $clase = 'App\\php\\modelos\\'.ucfirst($modelo);
     return new $clase;
   }
 
