@@ -11,4 +11,4 @@
 require_once '../../vendor/autoload.php';
 
 
-$app = new app\php\core\App();
+$app = new App\php\core\App();

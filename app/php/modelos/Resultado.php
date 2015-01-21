@@ -1,2 +1,2 @@
 <?php 
-namespace app\php\modelos;
+namespace App\php\modelos;

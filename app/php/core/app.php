@@ -1,5 +1,5 @@
 <?php 
-namespace app\php\core;
+namespace App\php\core;
 /**
 * 
 */

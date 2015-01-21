@@ -1,5 +1,5 @@
 <?php 
-namespace app\php\controladores;
+namespace App\php\controladores;
 /**
 * 
 */
