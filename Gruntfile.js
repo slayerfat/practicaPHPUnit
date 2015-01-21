@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 
     phpunit: {
       classes: {
-        dir: 'tests/php/'
+        dir: 'tests/'
       },
       options: {
         bin: 'vendor/bin/phpunit',
@@ -41,5 +41,9 @@ module.exports = function(grunt) {
 
   grunt.registerTask('php', [
     'phplint',
+  ]);
+
+  grunt.registerTask('phpunit', [
+    'phpunit',
   ]);
 };
