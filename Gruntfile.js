@@ -16,7 +16,7 @@ module.exports = function(grunt) {
       },
       phpApp: {
         files: ['app/php/**/*.php'],
-        tasks: ['phplint:app'],
+        tasks: ['phplint:app', 'phpunit'],
       },
       phpTests: {
         files: ['tests/php/**/*.php'],

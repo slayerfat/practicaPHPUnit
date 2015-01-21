@@ -22,7 +22,7 @@ class App{
     // require_once '../php/controladores/'. $this->controlador .'.php';
 
     // se instancia al controlador como un nuevo objeto
-    $clase = 'practica\\controladores\\'.'Home';
+    $clase = 'App\\php\\controladores\\'.'Home';
     $this->controlador = new $clase;
 
     // se chequea si existe el metodo solicitado

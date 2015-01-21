@@ -1,5 +1,6 @@
 <?php 
 namespace App\php\core;
+use App\php\modelos\Calculadora;
 class Controlador{
 
   protected $modelo = 'Calculadora';
@@ -9,9 +10,8 @@ class Controlador{
     if (file_exists('../php/modelos/' . $modelo . '.php')):
       $this->modelo = $modelo;
     endif;
-    require_once '../php/modelos/' . $this->modelo . '.php';
-
-    return new $modelo;
+    $clase = 'App\\php\\modelos\\'.'Usuario';
+    return new $clase;
   }
 
   protected function vista($vista, $datos = []){
