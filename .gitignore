@@ -1,5 +1,5 @@
 .test/*
-.pruebas/*
+pruebas/*
 node_modules/*
 bower_components/*
 
