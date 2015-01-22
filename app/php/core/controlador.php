@@ -8,7 +8,7 @@ class Controlador{
   
   protected function modelo($modelo){
 
-    if (file_exists('../php/modelos/' .strtolower($modelo) . '.php')):
+    if (file_exists('../php/modelos/' . ucfirst($modelo) . '.php')):
       $this->modelo = $modelo;
     endif;
     $clase = 'App\\php\\modelos\\'.ucfirst($modelo);

@@ -37,5 +37,17 @@ class Calculadora extends Controlador{
 
     return $x / $y;
   }
+
+  public function index(){
+    $calculadora = $this->modelo('Calculadora');
+
+    $archivo = file_get_contents('../../package.json', FILE_USE_INCLUDE_PATH);
+    $archivo = utf8_encode($archivo); 
+    $archivo = json_decode($archivo, true);
+    $datos = [
+      'infoSistema' => $archivo
+    ];
+    $this->vista('calculadora/index', $datos);
+  }
   
 }

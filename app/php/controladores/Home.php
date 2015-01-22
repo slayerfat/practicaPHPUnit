@@ -13,7 +13,7 @@ class Home extends Controlador{
 
     $this->vista('home/index', ['nombre' => $usuario->nombre]);
   }
-
+  
   public function create($usuario = '', $correo = ''){
     Usuario::create([
       'usuario' => $usuario,
