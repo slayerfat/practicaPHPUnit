@@ -1,12 +1,12 @@
 <?php
 namespace App\php\modelos;
-use App\php\modelos\DatosCompartidos;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class Error extends DatosCompartidos{
+class Error extends Eloquent{
 
   protected $id;
   protected $descripcion;
   protected $status;
-  protected $fecReg;
-  protected $fecMod;
+  protected $usrReg;
+  protected $usrMod;
 }

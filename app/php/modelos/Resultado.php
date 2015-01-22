@@ -1,7 +1,11 @@
 <?php 
 namespace App\php\modelos;
-use App\php\modelos\DatosCompartidos;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class Resultado extends DatosCompartidos{
+class Resultado extends Eloquent{
+
+  protected $status;
+  protected $usrReg;
+  protected $usrMod;
 
 }

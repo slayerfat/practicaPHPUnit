@@ -8,7 +8,9 @@
             "email": "slayerfat@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "illuminate/database": "~4.2"
+    },
     "require-dev": {
         "phpunit/phpunit": "4.4.*"
     },
