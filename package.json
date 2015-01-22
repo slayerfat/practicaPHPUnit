@@ -1,6 +1,6 @@
 {
   "name": "practicaPHPUnit",
-  "version": "0.0.0",
+  "version": "0.0.2-0",
   "description": "practicas de unit test",
   "main": "index.php",
   "scripts": {
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/slayerfat/practicaPHPUnit",
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-bump": "0.0.16",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-phplint": "0.0.5",
     "grunt-phpunit": "^0.3.6"

@@ -1,12 +1,12 @@
 <?php 
-
+namespace App\php\core;
 /**
 * 
 */
 class App{
 
-  protected $controlador = 'home';
-  protected $metodo      = 'index';
+  protected $controlador = 'Home';
+  protected $metodo      = 'Index';
   protected $parametros  = [];
   
   function __construct(){
@@ -14,15 +14,14 @@ class App{
     $url = $this->parseUrl();
 
     // url[0] es el controlador
-    if (file_exists('../php/controladores/'. $url[0] .'.php')):
-      $this->controlador = $url[0];
+    if (file_exists('../php/controladores/'. strtolower($url[0]) .'.php')):
+      $this->controlador = ucfirst($url[0]);
       unset($url[0]);
     endif;
 
-    require_once '../php/controladores/'. $this->controlador .'.php';
-
     // se instancia al controlador como un nuevo objeto
-    $this->controlador = new $this->controlador;
+    $clase = 'App\\php\\controladores\\'.ucfirst($this->controlador);
+    $this->controlador = new $clase;
 
     // se chequea si existe el metodo solicitado
     if ( isset($url[1]) ):

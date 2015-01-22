@@ -1,17 +1,18 @@
 <?php 
+namespace App\php\core;
+use App\php\modelos\Calculadora;
 
 class Controlador{
 
-  protected $modelo = 'Usuario';
+  protected $modelo = 'Calculadora';
   
   protected function modelo($modelo){
 
-    if (file_exists('../php/modelos/' . $modelo . '.php')):
+    if (file_exists('../php/modelos/' .strtolower($modelo) . '.php')):
       $this->modelo = $modelo;
     endif;
-    require_once '../php/modelos/' . $this->modelo . '.php';
-
-    return new $modelo;
+    $clase = 'App\\php\\modelos\\'.ucfirst($modelo);
+    return new $clase;
   }
 
   protected function vista($vista, $datos = []){

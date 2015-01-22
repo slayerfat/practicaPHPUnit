@@ -1,6 +1,8 @@
 .test/*
-.pruebas/*
+pruebas/*
 node_modules/*
 bower_components/*
+app/php/conexion.ini
 
 /vendor/
+/composer.lock

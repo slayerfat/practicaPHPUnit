@@ -10,6 +10,7 @@
  */
 
 require_once '../php/init.php';
-
-
-$app = new App();
+use App\Conexion;
+use App\php\core\App;
+$conexion = new Conexion;
+$app = new App;
