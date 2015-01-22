@@ -41,7 +41,7 @@
   </div>
   <div>
     <p>
-      <code><?php var_dump($datos) ?></code>
+      <pre><?php var_dump($datos) ?></pre>
     </p>
   </div>
 </body>

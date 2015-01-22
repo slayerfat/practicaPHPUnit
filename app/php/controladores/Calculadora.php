@@ -45,7 +45,8 @@ class Calculadora extends Controlador{
     $archivo = utf8_encode($archivo); 
     $archivo = json_decode($archivo, true);
     $datos = [
-      'infoSistema' => $archivo
+      'infoSistema' => $archivo,
+      'CalculadoraModelo' => $calculadora
     ];
     $this->vista('calculadora/index', $datos);
   }
