@@ -1,5 +1,11 @@
 <?php
 namespace App\php\modelos;
-class Calculadora{
+use App\php\modelos\DatosCompartidos;
+class Calculadora extends DatosCompartidos{
+
+  protected $id;
+  protected $fecha;
+  protected $operacion;
+
   
 }
