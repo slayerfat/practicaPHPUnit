@@ -1,6 +1,15 @@
 # practicaPHPUnit
 practicas de unit test en php
 
+__practica completa.__
+
+- se aprendio:
+    - Unit test ultra basico.
+    - namespaces y autoloader.
+    - metodologia MVC ultra basico.
+    - composer.
+-sin embargo, por falta de informacion y por la pretension de usar Laravel como framework de php se decidio parar esta practica.
+
 # dependecias necesarias
 
 ####primero que todo es necesario tener **php en el sistema.**
