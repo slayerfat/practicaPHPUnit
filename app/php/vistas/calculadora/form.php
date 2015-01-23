@@ -29,19 +29,19 @@ endif;
         <label>
           Operando 1
           <input 
-            type="number" 
-            name="x"
-            placeholder="introduzca numero"
-            value="<?php echo isset($_POST['x']) ? $_POST['x'] : null ?>"
+            type        ="number" 
+            name        ="x"
+            placeholder ="introduzca numero"
+            value       ="<?php echo isset($_POST['x']) ? $_POST['x'] : null ?>"
           >
         </label>
         <label>
           Operando 2
           <input 
-            type="number"
-            name="y" 
-            placeholder="introduzca numero"
-            value="<?php echo isset($_POST['y']) ? $_POST['y'] : null ?>"
+            type        ="number"
+            name        ="y" 
+            placeholder ="introduzca numero"
+            value       ="<?php echo isset($_POST['y']) ? $_POST['y'] : null ?>"
           >
         </label>
       </div>
@@ -58,9 +58,10 @@ endif;
       </div>
       <div>
         <input 
-          type="text" 
-          name="resultado" 
-          value="<?php echo isset($formCalc->resultado) ? $formCalc->resultado : null ?>"
+          type        ="text" 
+          name        ="resultado"
+          placeholder ="producto esperado"
+          value       ="<?php echo isset($formCalc->resultado) ? $formCalc->resultado : null ?>"
         >
       </div>
       <div>

@@ -45,7 +45,7 @@ class Calculadora extends Controlador{
     $archivo = utf8_encode($archivo); 
     $archivo = json_decode($archivo, true);
     $datos = [
-      'infoSistema' => $archivo,
+      'infoSistema'       => $archivo,
       'CalculadoraModelo' => $calculadora
     ];
     $this->vista('calculadora/index', $datos);
@@ -57,8 +57,8 @@ class Calculadora extends Controlador{
     $archivo = file_get_contents('../../package.json', FILE_USE_INCLUDE_PATH);
     $archivo = utf8_encode($archivo); 
     $archivo = json_decode($archivo, true);
-    $datos = [
-      'infoSistema' => $archivo,
+    $datos   = [
+      'infoSistema'       => $archivo,
       'CalculadoraModelo' => $calculadora
     ];
     $this->vista('calculadora/form', $datos);

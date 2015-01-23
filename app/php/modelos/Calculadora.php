@@ -5,7 +5,6 @@ use App\Conexion;
 class Calculadora extends Eloquent{
 
   protected $id;
-  protected $fecha;
   protected $operacion;
   protected $status;
   protected $usrReg;

@@ -8,7 +8,8 @@ use App\php\modelos\Usuario;
 class Home extends Controlador{
   
   public function index($nombre = ''){
-    $usuario = $this->modelo('Usuario');
+    
+    $usuario         = $this->modelo('Usuario');
     $usuario->nombre = $nombre;
 
     $this->vista('home/index', ['nombre' => $usuario->nombre]);
@@ -17,7 +18,7 @@ class Home extends Controlador{
   public function create($usuario = '', $correo = ''){
     Usuario::create([
       'usuario' => $usuario,
-      'correo' => $correo
+      'correo'  => $correo
     ]);
   }
 
