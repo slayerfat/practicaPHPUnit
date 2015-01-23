@@ -11,6 +11,13 @@ class CalculadoraForm extends Controlador{
   public $y;
   public $resultado;
 
+
+  /**
+   * chequea variables, actualiza la vista de calc/form 
+   * e introduce modelos a la base de datos
+   * @param array  $datos datos desde el formulario
+   * @param string $tipo  el tipo de operacion a realizar
+   */
   function __construct($datos = null, $tipo = '') {
 
     if ($datos):
@@ -23,7 +30,6 @@ class CalculadoraForm extends Controlador{
       if ( $this->modeloCalc->validar($this->x, $this->y) ):
 
         $this->controladorCalc = new ControladorCalc;
-        // $this->modeloResultado = new Resultado;
 
         switch ($tipo):
         case 'sumar':
@@ -39,7 +45,7 @@ class CalculadoraForm extends Controlador{
           $this->generarDivision();
           break;
         default:
-          // $this->modeloResultado->putResultado('');
+          $this->resultado = null;
           break;
         endswitch;
 
@@ -50,18 +56,22 @@ class CalculadoraForm extends Controlador{
       //error::insert error
     endif;
   }
+
   protected function generarSuma(){
     $this->resultado = $this->controladorCalc->sumar($this->x, $this->y);
     $this->modeloCalc->insertar($this->x, $this->y, '+', $this->resultado);
   }
+
   protected function generarResta(){
     $this->resultado = $this->controladorCalc->restar($this->x, $this->y);
     $this->modeloCalc->insertar($this->x, $this->y, '-', $this->resultado);
   }
+
   protected function generarMultiplicacion(){
     $this->resultado = $this->controladorCalc->multiplicar($this->x, $this->y);
     $this->modeloCalc->insertar($this->x, $this->y, '*', $this->resultado);
   }
+  
   protected function generarDivision(){
     $this->resultado = $this->controladorCalc->dividir($this->x, $this->y);
     $this->modeloCalc->insertar($this->x, $this->y, '/', $this->resultado);

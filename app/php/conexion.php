@@ -1,7 +1,9 @@
 <?php 
 namespace App;
 use Illuminate\Database\Capsule\Manager as Capsule;
-
+/**
+ * requerido para iniciar Eloquent
+ */
 class Conexion {
 
   public function __construct(){

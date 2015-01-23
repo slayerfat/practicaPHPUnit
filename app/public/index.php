@@ -12,5 +12,7 @@
 require_once '../php/init.php';
 use App\Conexion;
 use App\php\core\App;
+// requerido para eloquent:
 $conexion = new Conexion;
+// la "aplicacion"
 $app      = new App;

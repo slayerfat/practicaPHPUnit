@@ -2,6 +2,10 @@
 namespace App\php\controladores;
 use App\php\core\Controlador;
 
+/**
+ * clase que hace las operaciones de la calculadora (considerando
+ * dividir las operaciones de las vistas a otra clase)
+ */
 class Calculadora extends Controlador{
 
   public function sumar($x, $y){
@@ -38,19 +42,22 @@ class Calculadora extends Controlador{
     return $x / $y;
   }
 
+  /**
+   * genera la vista con los datos suministrados
+   */
   public function index(){
     $calculadora = $this->modelo('Calculadora');
 
-    $archivo = file_get_contents('../../package.json', FILE_USE_INCLUDE_PATH);
-    $archivo = utf8_encode($archivo); 
-    $archivo = json_decode($archivo, true);
-    $datos = [
+    $archivo = parent::getInfoSistema();
+    $datos   = [
       'infoSistema'       => $archivo,
       'CalculadoraModelo' => $calculadora
     ];
     $this->vista('calculadora/index', $datos);
   }
-
+  /**
+   * genera el formulario (la calculadora)
+   */
   public function form(){
     $calculadora = $this->modelo('Calculadora');
     $archivo     = parent::getInfoSistema();

@@ -3,7 +3,7 @@ namespace App\php\controladores;
 use App\php\core\Controlador;
 use App\php\modelos\Usuario;
 /**
-* 
+* clase de prueba para comprobar usos de eloquent y mvc
 */
 class Home extends Controlador{
   

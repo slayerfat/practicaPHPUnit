@@ -2,6 +2,8 @@
 namespace App\php\modelos;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 use App\php\modelos\Resultado; 
+
+
 class Calculadora extends Eloquent{
 
   protected $fillable = ['operacion', 'status'];
@@ -16,7 +18,13 @@ class Calculadora extends Eloquent{
     endif;
     return true;
   }
-
+  /**
+   * inserta los datos referente al formulario de la calculadora.
+   * @param  int    $x operando 1
+   * @param  int    $y operando 2
+   * @param  string $o simbolo
+   * @param  mixed  $r el resultado
+   */
   public function insertar($x, $y, $o, $r){
     $this->operacion = "$x $o $y";
     $this->save();
