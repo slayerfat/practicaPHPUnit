@@ -13,4 +13,4 @@ require_once '../php/init.php';
 use App\Conexion;
 use App\php\core\App;
 $conexion = new Conexion;
-$app = new App;
+$app      = new App;

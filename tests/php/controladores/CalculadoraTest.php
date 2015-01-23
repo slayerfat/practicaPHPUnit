@@ -1,7 +1,7 @@
 <?php 
 use App\php\controladores\Calculadora;
 
-class CalculadoraTest extends PHPUnit_Framework_TestCase{
+class ControladorCalculadoraTest extends PHPUnit_Framework_TestCase{
 
   public function setup(){
     $this->calculadora = new Calculadora;
