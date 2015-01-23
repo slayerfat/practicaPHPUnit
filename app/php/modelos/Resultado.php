@@ -9,4 +9,11 @@ class Resultado extends Eloquent{
   protected $usrReg;
   protected $usrMod;
 
+  public function getResultado(){
+    return $this->resultado;
+  }
+  public function putResultado($datos){
+    $this->resultado = $datos;
+  }
+
 }

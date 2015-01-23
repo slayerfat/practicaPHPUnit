@@ -68,5 +68,11 @@ endif;
       </div>
     </form>
   </div>
+  <hr>
+  <div>
+    <pre>
+      <?php var_dump($formCalc) ?>
+    </pre>
+  </div>
 </body>
 </html>
