@@ -20,4 +20,11 @@ class Controlador{
     require_once '../php/vistas/'. $vista .'.php';
 
   }
+
+  static function getInfoSistema(){
+    $archivo = file_get_contents('../../package.json', FILE_USE_INCLUDE_PATH);
+    $archivo = utf8_encode($archivo); 
+    $archivo = json_decode($archivo, true);
+    return $archivo;
+  }
 }

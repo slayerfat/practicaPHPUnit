@@ -53,11 +53,8 @@ class Calculadora extends Controlador{
 
   public function form(){
     $calculadora = $this->modelo('Calculadora');
-
-    $archivo = file_get_contents('../../package.json', FILE_USE_INCLUDE_PATH);
-    $archivo = utf8_encode($archivo); 
-    $archivo = json_decode($archivo, true);
-    $datos   = [
+    $archivo     = parent::getInfoSistema();
+    $datos       = [
       'infoSistema'       => $archivo,
       'CalculadoraModelo' => $calculadora
     ];

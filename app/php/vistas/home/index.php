@@ -5,10 +5,24 @@
 </head>
 <body>
   <div>
-    <h1>texto aleatorio</h1>
+    <h1>
+      Calculadora version: <?php echo $datos['infoSistema']['version'] ?>
+    </h1>
+    <h2>
+      Nombre del sistema: <?php echo $datos['infoSistema']['name'] ?>
+    </h2>
     <p>
-      datos: 
-      <code><?php var_dump($datos) ?></code>
+      <?php echo $datos['infoSistema']['description'] ?>
+    </p>
+  </div>
+  <div>
+    <a href="calculadora/form">
+      <button>Ir a Calculadora</button>
+    </a>
+  </div>
+  <div>
+    <p>
+      <pre><?php var_dump($datos) ?></pre>
     </p>
   </div>
 </body>
