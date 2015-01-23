@@ -3,7 +3,6 @@ namespace App\php\controladores;
 use App\php\core\Controlador;
 use App\php\modelos\Calculadora as ModeloCalc;
 use App\php\controladores\Calculadora as ControladorCalc;
-use App\php\modelos\Resultado; 
 use App\php\modelos\Error; 
 
 class CalculadoraForm extends Controlador{
@@ -24,7 +23,7 @@ class CalculadoraForm extends Controlador{
       if ( $this->modeloCalc->validar($this->x, $this->y) ):
 
         $this->controladorCalc = new ControladorCalc;
-        $this->modeloResultado = new Resultado;
+        // $this->modeloResultado = new Resultado;
 
         switch ($tipo):
         case 'sumar':
@@ -40,36 +39,31 @@ class CalculadoraForm extends Controlador{
           $this->generarDivision();
           break;
         default:
-          $this->modeloResultado->putResultado('');
+          // $this->modeloResultado->putResultado('');
           break;
         endswitch;
-
-        $this->resultado = $this->modeloResultado->getResultado();
 
       else:
         $this->resultado = null;
       endif;
     else:
       //error::insert error
-      $error = new Error;
     endif;
   }
   protected function generarSuma(){
-    $this->modeloResultado->putResultado( $this->controladorCalc->sumar($this->x, $this->y) );
-    // guardar resultado---
-    // $this->modeloCalc->insertar();
-    // $this->modeloResultado->insertar();
+    $this->resultado = $this->controladorCalc->sumar($this->x, $this->y);
+    $this->modeloCalc->insertar($this->x, $this->y, '+', $this->resultado);
   }
   protected function generarResta(){
-    $this->modeloResultado->putResultado( $this->controladorCalc->restar($this->x, $this->y) );
-    // guardar resultado---
+    $this->resultado = $this->controladorCalc->restar($this->x, $this->y);
+    $this->modeloCalc->insertar($this->x, $this->y, '-', $this->resultado);
   }
   protected function generarMultiplicacion(){
-    $this->modeloResultado->putResultado( $this->controladorCalc->multiplicar($this->x, $this->y) );
-    // guardar resultado---
+    $this->resultado = $this->controladorCalc->multiplicar($this->x, $this->y);
+    $this->modeloCalc->insertar($this->x, $this->y, '*', $this->resultado);
   }
   protected function generarDivision(){
-    $this->modeloResultado->putResultado( $this->controladorCalc->dividir($this->x, $this->y) );
-    // guardar resultado---
+    $this->resultado = $this->controladorCalc->dividir($this->x, $this->y);
+    $this->modeloCalc->insertar($this->x, $this->y, '/', $this->resultado);
   }
 }
