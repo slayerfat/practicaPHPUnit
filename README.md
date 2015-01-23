@@ -8,7 +8,7 @@ __practica completa.__
     - namespaces y autoloader.
     - metodologia MVC ultra basico.
     - composer.
--sin embargo, por falta de informacion y por la pretension de usar Laravel como framework de php se decidio parar esta practica.
+- sin embargo, por falta de informacion y por la pretension de usar Laravel como framework de php se decidio parar esta practica.
 
 # dependecias necesarias
 
