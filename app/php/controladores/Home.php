@@ -11,8 +11,12 @@ class Home extends Controlador{
     
     $usuario         = $this->modelo('Usuario');
     $usuario->nombre = $nombre;
-
-    $this->vista('home/index', ['nombre' => $usuario->nombre]);
+    $archivo         = parent::getInfoSistema();
+    $datos           = [
+      'nombre'      => $usuario->nombre,
+      'infoSistema' => $archivo
+    ];
+    $this->vista('home/index', $datos);
   }
   
   public function create($usuario = '', $correo = ''){

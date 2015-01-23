@@ -1,17 +1,13 @@
 <?php
 namespace App\php\modelos;
 use Illuminate\Database\Eloquent\Model as Eloquent;
-use App\Conexion;
+use App\php\modelos\Resultado; 
 class Calculadora extends Eloquent{
 
-  protected $id;
-  protected $operacion;
-  protected $status;
-  protected $usrReg;
-  protected $usrMod;
+  protected $fillable = ['operacion', 'status'];
 
-  function __construct() {
-    $this->conexion = new Conexion;
+  public function resultados(){
+    return $this->hasMany('resultados');
   }
 
   public function validar($x, $y){
@@ -19,6 +15,16 @@ class Calculadora extends Eloquent{
       return false;
     endif;
     return true;
+  }
+
+  public function insertar($x, $y, $o, $r){
+    $this->operacion = "$x $o $y";
+    $this->save();
+
+    $resultado = new Resultado;
+    $resultado->calculadoraID = $this->id;
+    $resultado->resultado     = $r;
+    $resultado->save();
   }
   
 }
