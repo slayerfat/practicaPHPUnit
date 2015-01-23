@@ -50,5 +50,18 @@ class Calculadora extends Controlador{
     ];
     $this->vista('calculadora/index', $datos);
   }
+
+  public function form(){
+    $calculadora = $this->modelo('Calculadora');
+
+    $archivo = file_get_contents('../../package.json', FILE_USE_INCLUDE_PATH);
+    $archivo = utf8_encode($archivo); 
+    $archivo = json_decode($archivo, true);
+    $datos = [
+      'infoSistema' => $archivo,
+      'CalculadoraModelo' => $calculadora
+    ];
+    $this->vista('calculadora/form', $datos);
+  }
   
 }
