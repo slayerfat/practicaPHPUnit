@@ -2,8 +2,9 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Auth;
 use Illuminate\Http\Request;
+use App\Calculadora;
 
 class CalculadoraController extends Controller {
 
@@ -42,9 +43,21 @@ class CalculadoraController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		$datos = $request->all();
+
+		$calculadora = new Calculadora;
+		$resultado = $calculadora->operacion(
+			$datos['operando_x'],
+			$datos['operando_y'],
+			$datos['operacion']
+		);
+		$algo = \App\Resultado::create(['resultado' => $resultado]);
+		$calculadora->user_id = Auth::user()->id;
+		$calculadora->resultado_id = $algo->id;
+		$calculadora->save();
+		dd($calculadora);
 	}
 
 	/**

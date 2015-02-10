@@ -31,4 +31,11 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 */
 	protected $hidden = ['password', 'remember_token'];
 
+	/**
+   * un usuario tiene muchas operaciones
+   */
+	public function operaciones(){
+		return $this->hasMany('App\Calculadora');
+	}
+
 }
