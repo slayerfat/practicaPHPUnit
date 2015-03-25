@@ -1,4 +1,7 @@
 # practicaPHPUnit
+
+[![Build Status](https://travis-ci.org/slayerfat/practicaPHPUnit.svg)](https://travis-ci.org/slayerfat/practicaPHPUnit)
+
 practicas de unit test en php
 
 __practica completa.__
@@ -27,7 +30,7 @@ mv composer.phar /usr/local/bin/composer
 ```
 
 - si falla pueden `sudo !!`
-- chequear que este instalado `composer -V` el sistema dira 
+- chequear que este instalado `composer -V` el sistema dira
 
 si falla porque no tienen curl
 ```
@@ -35,7 +38,7 @@ php -r "readfile('https://getcomposer.org/installer');" | php
 mv composer.phar /usr/local/bin/composer
 ```
 
-- chequear que este instalado `composer -V` el sistema dira 
+- chequear que este instalado `composer -V` el sistema dira
 `Composer version 1.0.-* (...) fecha`
 
 ###grunt
@@ -50,7 +53,7 @@ mv composer.phar /usr/local/bin/composer
 `git clone https://github.com/slayerfat/practicaPHPUnit`
 
 ###obtener las dependecias del sistema
-_desde la carpeta clonada_ 
+_desde la carpeta clonada_
 
 `npm install`
 
@@ -89,7 +92,7 @@ eso debera generar las carpetas vendor/ node_modules/ y bower_components/
 ```
 ## practica de MVC
 
-se decidio tambien practicar MVC gracias a 
+se decidio tambien practicar MVC gracias a
   [este playlist](https://www.youtube.com/playlist?list=PLfdtiltiRHWGXVHXX09fxXDi-DqInchFD)
 
 ## practica de phpunit
